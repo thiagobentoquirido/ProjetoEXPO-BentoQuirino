@@ -9,7 +9,7 @@ body{
     background: #000;
     justify-content: center;
     display: flex;
-    
+    transition: all 0.2s ease-in-out;
 }
 
 .container ul li .span{
@@ -191,5 +191,6 @@ ul li .btn1:hover{
    0 0 50px #e0c217;
    -webkit-box-reflect: below 1p linear-gradient(transparent, #0005);
    animation-duration: 1s;
+   cursor: pointer;
    transition: all 0.4s ease-in-out;
 }
