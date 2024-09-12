@@ -103,7 +103,7 @@ body{
     background-color:#000000;
 }
 
-.container ul li .bt .sec1{
+.container ul li .bt #SEC1{
     width: 600px;
     box-sizing: border-box;
     flex-grow: 1;
@@ -114,7 +114,8 @@ body{
     justify-content: center;
     margin-right: 400;
     margin-left:  490px;
-
+    margin-top: -220px;
+    height: 480px;
     flex-grow: 1;
     background: linear-gradient(135deg, #ffe655, rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -123,6 +124,15 @@ body{
     border:1px solid #e0c217;
     box-shadow: 0 8px 32px 0 #e0c217;
 }
+.imagem{
+    width: 100%;
+    height: 100%;
+   
+    border-radius: 20px;
+    border:1px solid #e0c217;
+    box-shadow: 0 8px 32px 0 #e0c217;
+}
+
 :root{
     --cor-de-fundo: #000;
     --cor-pontos: #fff;
@@ -133,8 +143,14 @@ body{
     background-color: var(--cor-de-fundo);
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
+   
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid #e0c217;
+    box-shadow: 0 8px 32px 0 #e0c217;
     left: 0;
     z-index: 1000; animation: appear  linear;
     transition: 0.2ms;
@@ -178,9 +194,10 @@ body{
     margin: 0;
     white-space: nowrap;
     width: 500px;
+    letter-spacing: 4px;
+    margin-top: -64px;
     height: 32px;
-    margin-left: -250px;
-    margin-top: 250px;
+
     font-family: Arial, Helvetica, sans-serif;
     z-index: 1000;
 }
@@ -207,18 +224,7 @@ body{
 
 }
 
-ul li .bt .sec1 #catimg{
-    padding: 0;
-    background: linear-gradient(135deg, #e0c217, rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid #e0c217;
-    margin-top: -220px;
-    position: absolute;
-    background-color: #000;
-    box-shadow: 0 8px 32px 0 #e0c217;
-}
+
 ul li .btn:first-child{
     filter: hue-rotate(2deg);
 

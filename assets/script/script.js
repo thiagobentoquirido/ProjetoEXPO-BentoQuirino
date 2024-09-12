@@ -11,11 +11,29 @@ async function getData() {
     
 }
 async function plotData() {
+  // some com imagem
+  let div = document.getElementById('SEC1')
+
+  // coloca loading com animação
+
+  div.innerHTML = `<div class="loading">
+        <span class="points"></span>
+        <span class="points"></span>
+        <span class="points"></span>
+        
+        <p id="thiagolindo">carregando aguarde...</p>
+    </div>`
+    
+
+  // Pega da api
   const quots = await getData();
-  let div = document.getElementById('catimg')
-  div.innerHTML = `<img src="${quots}" />`;
-  window.location.reload(true);
-  
+
+  // Coloca na img
+  div.innerHTML = `<img class='imagem' src="${quots}" />`;
+
+  // tira o loading e bota na tela
+
+
 }
 
 /*
