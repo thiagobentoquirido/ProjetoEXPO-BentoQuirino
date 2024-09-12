@@ -1,7 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    
+    width: 100%;
+    margin-top: -1%;
     box-sizing: border-box;
 }
 @media screen and (max-width:305px) {
@@ -14,7 +15,7 @@
 
 body{
     background: #000;
-  
+    overflow: hidden;
     animation: appear  linear;
     justify-content: center;
     display: flex;
@@ -38,7 +39,11 @@ body{
 }
 .container ul li .btn1{
     color: #ecc916;
+    animation: bt1nn;
+   animation: bt1nn .4s linear ease-in-out;
+    transition: all 0.4s ease-in-out;
     position: absolute;
+    animation: preencher .5s linear  ease-in-out;
     text-align: center;
     animation: appear  linear;
     padding: 10px;
@@ -80,6 +85,7 @@ body{
     animation: appear  linear;
     margin: 50px;
     display: flex;
+    grid-column: auto;
     height: 650px;
     margin-left: 100px;
     justify-content: center;
@@ -162,12 +168,11 @@ body{
     font-size: 20px;
     font-weight: bold;
     position:fixed;
-   
     margin: 0;
     white-space: nowrap;
     width: 500px;
     height: -200px;
-    margin-top:  350px;
+    margin-top: 300px;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 1000;
 }
@@ -218,19 +223,42 @@ ul li #text1{
     text-align: center;
     width: 100%;
     margin-top: -316px;
-    letter-spacing: 4px;
-   
+    background-color: transparent;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 20px;
-    background: transparent;
-    box-shadow: 0 8px 32px 0 #e0c217;
+    letter-spacing: 4px;
     overflow: hidden;
+    transition: all 0.4s ease-in-out;
     font-size: 35px;
-    
+    animation-duration: texto123 .4s;
+    animation: texto123 .6s linear infinite alternate;
     animation: mark .5 step-end infinite alternate,
     write 3s steps(22,end) ;
 }
+
+@keyframes texto123{
+    0%{
+       color: #fff;
+       transition: all 0.4s ease-in-out;
+    }
+    50%{
+        color: #e0c217;
+        transition: all 0.4s ease-in-out;    }
+    100%{
+        transition: all 0.4s ease-in-out;
+        color: #ffe655;
+    }
+    
+}
+@keyframes preencher {
+    0% {
+      fill: transparent;
+    }
+    100% {
+      fill: #002F52;
+    }
+  }
 @keyframes mark{
     50%{
             box-shadow: 1rem 0 0 transparent;
@@ -241,6 +269,14 @@ ul li #text1{
          width: 0;
     }
 }
+@keyframes bt1nn{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.05);
+  }
+}
 ul li .btn1:hover{
    background-color: #ebc81b;
    color: #000;
@@ -249,7 +285,8 @@ ul li .btn1:hover{
    0 0 25px #e0c217,
    0 0 50px #e0c217;
    -webkit-box-reflect: below 1p linear-gradient(transparent, #0005);
-   animation-duration: 1s;
+   animation-duration: 0.5s;
    cursor: pointer;
-   transition: all 0.1s ease-in-out;
+   font-size: 27px;
+   transition: all 0.4s ease-in-out;
 }
