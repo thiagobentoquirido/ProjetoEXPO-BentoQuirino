@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    margin-top: -1%;
     box-sizing: border-box;
 }
 @media screen and (max-width:305px) {
@@ -15,7 +14,7 @@
 
 body{
     background: #000;
-    overflow: hidden;
+ 
     animation: appear  linear;
     justify-content: center;
     display: flex;
@@ -23,7 +22,7 @@ body{
 }
 
 .container ul li .span{
-    width: 200%;
+    width: 80%;
     animation: appear  linear;
     margin: 0 auto;
     flex-grow: 1;
@@ -138,11 +137,14 @@ body{
     transition: 0.2ms;
     overflow: hidden;
     display: flex;
+    background-color: #000;
     align-items: center;
     justify-content: center;
 }
 .doo .loading{
     transition: 0.1ms;
+    overflow: hidden;
+    background-color: #000;
 
 }
 
@@ -168,11 +170,12 @@ body{
     font-size: 20px;
     font-weight: bold;
     position:fixed;
+    
     margin: 0;
     white-space: nowrap;
     width: 500px;
-    height: -200px;
-    margin-top: 300px;
+    height: -100px;
+    margin-top: 290px;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 1000;
 }
